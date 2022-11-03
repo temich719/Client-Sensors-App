@@ -1,0 +1,75 @@
+.sensors-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    position: relative;
+    top: 60px;
+}
+
+.visible {
+    height: 20px;
+    width: 400px;
+    border: 1px black solid
+}
+
+td.visible {
+    width: 100px;
+    border: 1px black solid;
+    text-align: center;
+}
+
+.logout {
+    position: relative;
+    left: 70%;
+    bottom: 40px;
+    text-decoration: underline;
+}
+
+.logout:hover {
+    cursor: pointer;
+}
+
+.search {
+    position: relative;
+    top: 40px;
+    left: 390px;
+}
+
+.search {
+    position: relative;
+    top: 40px;
+    left: 390px;
+}
+
+.invisible {
+    border: none;
+}
+
+.invisible:hover {
+    cursor: pointer;
+}
+
+.sensors-from-server {
+    position: fixed;
+    left: 398px;
+    top: 204px;
+}
+
+.sensors-from-server-admin {
+    position: fixed;
+    top: 205px;
+    left: 372px;
+}
+
+.add-sensor {
+    position: fixed;
+    top: 355px;
+    left: 398px;
+    width: 100px;
+    height: 30px;
+}
+
+.pagination-module {
+    position: fixed;
+    top: 340px;
+    left: 600px;
+}

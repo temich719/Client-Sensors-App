@@ -1,0 +1,63 @@
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<h1>Sensor table</h1>
+<a class="logout" (click)="logout()">Logout</a>
+
+<div>
+    <input type="text" placeholder="input text for search" class="search" [(ngModel)]="textForSearch">
+    <button type="button" (click)="search()" class="search">Search</button>
+    <table class="sensors-table">
+        <tr>
+            <td class="invisible"></td>
+            <td class="visible">Name</td>
+            <td class="visible">Model</td>
+            <td class="visible">Type</td>
+            <td class="visible">Range</td>
+            <td class="visible">Unit</td>
+            <td class="visible">Location</td>
+            <td class="invisible"></td>
+        </tr>
+    </table>
+
+    <span *ngIf="isAdmin" class="sensors-from-server-admin">
+        <table style="border-collapse: collapse;" *ngFor="let sensor of sensors | paginate : {itemsPerPage: 4, currentPage: page, totalItems: total};">
+            <tr>
+                <td class="invisible" (click)="updateSensor(sensor.id)"><span class="material-icons">create</span></td>
+                <td class="visible" title={{sensor.description}}>{{sensor.name}}</td>
+                <td class="visible">{{sensor.model}}</td>
+                <td class="visible">{{sensor.type}}</td>
+                <td class="visible">{{sensor.range}}</td>
+                <td class="visible">{{sensor.unit}}</td>
+                <td class="visible">{{sensor.location}}</td>
+                <td class="invisible" (click)="deleteSensor(sensor.id)"><span class="material-icons">clear</span></td>
+            </tr>
+        </table>
+    </span>
+
+    <span *ngIf="!isAdmin" class="sensors-from-server">
+        <table style="border-collapse: collapse;" *ngFor="let sensor of sensors | paginate : {itemsPerPage: 4, currentPage: page, totalItems: total};">
+            <tr>
+                <td class="visible" title={{sensor.description}}>{{sensor.name}}</td>
+                <td class="visible">{{sensor.model}}</td>
+                <td class="visible">{{sensor.type}}</td>
+                <td class="visible">{{sensor.range}}</td>
+                <td class="visible">{{sensor.unit}}</td>
+                <td class="visible">{{sensor.location}}</td>
+            </tr>
+        </table>
+    </span>
+
+    <div class="d-flex justify-content-center pagination-module">
+        <pagination-controls
+          previousLabel="Prev"
+          nextLabel="Next"
+          (pageChange)="onTableDataChange($event)"
+        >
+        </pagination-controls>
+    </div>
+
+    <button *ngIf="isAdmin" type="button" class="add-sensor" (click)="goToAddSensorPage()">Add sensor</button>
+
+</div>

@@ -1,0 +1,14 @@
+<div class="register-form">
+    <h1>Login form</h1>
+    <span>Enter login and password for access</span>
+    <br><br><br>
+    <span class="login-label">Login</span> 
+    <input type="text" class="login-input" placeholder="Login" [(ngModel)]="login">
+    <br><br>
+    <span class="password-label">Password</span> 
+    <input type="password" class="password-input" placeholder="Password" [(ngModel)]="password">
+    <br><br>
+    <a routerLink="/register" class="registration">Registration</a>  
+    <span *ngIf="errorMessage" class="error-message">Wrong login or password</span>
+    <button type="button" class="register-button" (click)="signIn()">Login</button>
+</div>

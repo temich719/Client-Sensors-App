@@ -1,0 +1,118 @@
+.drop {
+    background-color: antiquewhite;
+}
+
+.drop:hover {
+    cursor: pointer;
+}
+
+.up {
+    position: relative;
+    bottom: 4px;
+    left: 10px;
+}
+
+.down {
+    position: relative;
+    top: 21px;
+    right: 14px;
+}
+
+.to {
+    position: relative;
+    left: 10px;
+}
+
+.from {
+    height: 40px;
+    width: 70px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+    position: relative;
+    top: 2px;
+    left: 130px;
+}
+
+.add-edit-form {
+    border: 3px solid black;
+    height: 600px;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+}
+
+.add-edit {
+    position: relative;
+    top: 10px;
+    left: 40px;
+}
+
+.name-input {
+    position: relative;
+    left: 20px;
+    width: 200px;
+}
+
+.model-input {
+    position: relative;
+    left: 24px;
+    width: 200px;
+}
+
+.fr {
+    position: relative;
+    left: 10px;
+}
+
+.el {
+    position: relative;
+    left: 40px;
+}
+
+.type-select {
+    position: relative;
+    left: 10px;
+    width: 150px;
+}
+
+.unit-select {
+    position: relative;
+    left: 13px;
+    width: 150px;
+}
+
+.des {
+    position: fixed;
+    left: 548px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.save {
+    position: relative;
+    top: 50px;
+    left: 80px;
+    width: 100px;
+    height: 30px;
+}
+
+.cancel {
+    position: relative;
+    top: 50px;
+    left: 120px;
+    width: 100px;
+    height: 30px;
+}
+
+.error {
+    position: fixed;
+    top: 540px;
+    left: 610px;
+    color: red;
+}

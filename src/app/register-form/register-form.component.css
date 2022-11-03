@@ -1,0 +1,42 @@
+.register-form {
+    height: 300px;
+    width: 300px;
+    background-color: lightgray;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+    text-align: center;
+}
+
+.login-label {
+    position: relative;
+    right: 15px;
+}
+
+.password-label {
+    position: relative;
+    right: 4px;
+}
+
+.login-input {
+    position: relative;
+    left: 12px;
+}
+
+.register-button {
+    width: 200px;
+    position: relative;
+    top: 40px;
+    right: 17px;
+    border-radius: 10px;
+}
+
+.login {
+    position: relative;
+    left: 1px;
+    color: blue;
+}
+
+button:hover {
+    cursor: pointer;
+}

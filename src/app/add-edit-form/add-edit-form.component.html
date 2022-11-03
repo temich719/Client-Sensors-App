@@ -1,0 +1,54 @@
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<div class="add-edit-form">
+    <h1 class="add-edit">Add/Edit</h1>
+    <br>
+    <span class="el">Name* <input type="text" class="name-input" placeholder="Name" [(ngModel)]="name"></span><br><br>
+    <span class="el">Model* <input type="text" class="model-input" placeholder="Model" [(ngModel)]="model"></span><br><br>
+    <span class="el">Range <span>from</span><input type="text" class="from fr" [(ngModel)]="rangeFrom">
+        <span class="material-icons drop up" (click)="increaseRangeFrom()" onselectstart="return false" onmousedown="return false">arrow_drop_up</span>
+        <span class="material-icons drop down" (click)="descreaseRangeFrom()" onselectstart="return false" onmousedown="return false">arrow_drop_down</span>
+        <span>to</span><input type="text" [(ngModel)]="rangeTo" class="from to">
+        <span class="material-icons drop up" (click)="increaseRangeTo()" onselectstart="return false" onmousedown="return false">arrow_drop_up</span>
+        <span class="material-icons drop down" (click)="decreaseRangeTo()" onselectstart="return false" onmousedown="return false">arrow_drop_down</span>
+    </span><br><br>
+    <span class="type el">
+        Type*
+        <select class="type-select" [(ngModel)]="type">
+            <option value="Pressure">Pressure</option>
+            <option value="Voltage">Voltage</option>
+            <option value="Temperature">Temperature</option>
+            <option value="Humidity">Humidity</option>
+        </select>
+    </span>
+    <br><br>
+    <span class="el">
+        Unit*
+        <select class="unit-select" [(ngModel)]="unit">
+            <option value="bar">bar</option>
+            <option value="voltage">voltage</option>
+            <option value="℃">℃</option>
+            <option value="%">%</option>
+        </select>
+    </span>
+    <br><br>
+    <span class="el">
+        Location <input type="text" placeholder="location" [(ngModel)]="location">
+    </span>
+    <br>
+    <br>
+    <span>
+        <span class="des">Description</span>
+        <textarea [(ngModel)]="description"></textarea>
+    </span>
+
+    <span class="error" *ngIf="err">You must fill all required feilds!</span>
+
+    <div>
+        <button type="button" class="save" (click)="save()">Save</button>
+        <button type="button" class="cancel" (click)="cancel()">Cancel</button>
+    </div>
+    
+</div>
